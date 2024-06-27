@@ -9,6 +9,6 @@ import (
 
 func main() {
 	app.Run("hsplit", func(w *unison.Window) {
-		hsplit.New().Layout(w.Content())
+		w.Content().AddChild(hsplit.New().Layout())
 	})
 }
